@@ -1,6 +1,6 @@
-package com.company.main;
+package org.example.main;
 
-import com.company.util.HibernateUtil;
+import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 
 public class Main {
