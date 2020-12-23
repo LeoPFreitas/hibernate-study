@@ -25,7 +25,8 @@ public class HibernateUtil {
         dbSettings.put(Environment.PASS, "postgres");
         dbSettings.put(Environment.DRIVER, "org.postgresql.Driver");
         dbSettings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQL82Dialect");
-        dbSettings.put(Environment.HBM2DDL_AUTO, "create");
+//        dbSettings.put(Environment.HBM2DDL_AUTO, "create");
+        dbSettings.put(Environment.HBM2DDL_AUTO, "update");
         dbSettings.put(Environment.SHOW_SQL, "true");
         dbSettings.put(Environment.FORMAT_SQL, "true");
 
