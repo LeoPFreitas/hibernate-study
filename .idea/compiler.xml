@@ -9,6 +9,7 @@
         <module name="hibernate-config-and-session-factory" />
         <module name="hibernate-save-and-persist" />
         <module name="hibernate-crud" />
+        <module name="hibernate-dirty-checking" />
       </profile>
     </annotationProcessing>
   </component>

@@ -12,6 +12,7 @@
         <module>hibernate-config-and-session-factory</module>
         <module>hibernate-save-and-persist</module>
         <module>hibernate-crud</module>
+        <module>hibernate-dirty-checking</module>
     </modules>
 
     <properties>
