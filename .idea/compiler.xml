@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-config-and-session-factory" />
         <module name="hibernate-save-and-persist" />
+        <module name="hibernate-crud" />
       </profile>
     </annotationProcessing>
   </component>

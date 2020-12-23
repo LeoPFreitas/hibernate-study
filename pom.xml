@@ -11,6 +11,7 @@
     <modules>
         <module>hibernate-config-and-session-factory</module>
         <module>hibernate-save-and-persist</module>
+        <module>hibernate-crud</module>
     </modules>
 
     <properties>
