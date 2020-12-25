@@ -13,6 +13,7 @@
         <module>hibernate-save-and-persist</module>
         <module>hibernate-crud</module>
         <module>hibernate-dirty-checking</module>
+        <module>hibernate-value-object</module>
     </modules>
 
     <properties>
