@@ -14,6 +14,7 @@
         <module>hibernate-crud</module>
         <module>hibernate-dirty-checking</module>
         <module>hibernate-value-object</module>
+        <module>hibernate-save-collection</module>
     </modules>
 
     <properties>
