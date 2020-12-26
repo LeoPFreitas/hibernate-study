@@ -1,6 +1,9 @@
 package example.entities;
 
+import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -24,6 +27,7 @@ public class Employee {
 
     @ElementCollection
     @JoinTable(name = "address_table", joinColumns = @JoinColumn(name = "employee_id"))
+    @CollectionId(columns = {@Column(name = "address_id")}, generator = "sequence", type = @Type(type = "int"))
     private Collection<Address> addressList = new HashSet<>();
 
     @Column(name = "salary")
