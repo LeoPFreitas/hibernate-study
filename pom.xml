@@ -15,6 +15,7 @@
         <module>hibernate-dirty-checking</module>
         <module>hibernate-value-object</module>
         <module>hibernate-save-collection</module>
+        <module>hibernate-one-to-one-mapping</module>
     </modules>
 
     <properties>
