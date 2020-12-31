@@ -1,16 +1,11 @@
 package example.entities;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.HashSet;
 
 @Entity
-@Table(name = "employee_table")
+@Table(name = "employee")
 @DynamicUpdate
 public class Employee {
 

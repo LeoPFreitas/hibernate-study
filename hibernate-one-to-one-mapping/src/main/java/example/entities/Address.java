@@ -20,6 +20,9 @@ public class Address {
     @Column(name = "cep", length = 8)
     private String cep;
 
+    @OneToOne(mappedBy = "address")
+    private Employee employee;
+
     public String getStreetName() {
         return streetName;
     }
@@ -50,5 +53,13 @@ public class Address {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 }
