@@ -3,6 +3,7 @@ package example;
 import example.entities.Address;
 import example.entities.Employee;
 import example.util.HibernateUtil;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -10,9 +11,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            session.beginTransaction();
-            session.persist(getEmployee());
-            session.getTransaction().commit();
+
+            getEmployAndAddressByEMployeeId();
+
+//            session.beginTransaction();
+//            session.persist(getEmployee());
+//            session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -38,6 +42,24 @@ public class Main {
 
         employee.getAddressList().addAll(List.of(address1, address2));
 
+        address1.setEmployee(employee);
+        address2.setEmployee(employee);
+
         return employee;
+    }
+
+    private static void getEmployAndAddressByEMployeeId() {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Employee employee = session.get(Employee.class, 1);
+
+            if (employee != null) {
+                System.out.println(employee.toString());
+                employee.getAddressList()
+                        .forEach(e -> System.out.println(e.toString()));
+            }
+
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
     }
 }

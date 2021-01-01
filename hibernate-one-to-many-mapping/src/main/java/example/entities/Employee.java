@@ -22,9 +22,7 @@ public class Employee {
     @Column(name = "email", unique = true)
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "employee_address", joinColumns = @JoinColumn(name = "employee_id"), inverseJoinColumns =
-    @JoinColumn(name = "address_id"))
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     private List<Address> addressList = new ArrayList<>();
 
     @Column(name = "salary")
@@ -63,5 +61,15 @@ public class Employee {
 
     public List<Address> getAddressList() {
         return addressList;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "EmployeeId=" + EmployeeId +
+                ", employeeName='" + employeeName + '\'' +
+                ", email='" + email + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
