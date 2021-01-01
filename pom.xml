@@ -16,6 +16,7 @@
         <module>hibernate-value-object</module>
         <module>hibernate-save-collection</module>
         <module>hibernate-one-to-one-mapping</module>
+        <module>hibernate-one-to-many-mapping</module>
     </modules>
 
     <properties>

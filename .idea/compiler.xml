@@ -11,6 +11,7 @@
         <module name="hibernate-one-to-one-mapping" />
         <module name="hibernate-save-and-persist" />
         <module name="hibernate-save-collection" />
+        <module name="hibernate-one-to-many-mapping" />
         <module name="hibernate-crud" />
         <module name="hibernate-dirty-checking" />
       </profile>
