@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-config-and-session-factory" />
+        <module name="hibernate-many-to-many-mapping" />
         <module name="hibernate-value-object" />
         <module name="hibernate-one-to-one-mapping" />
         <module name="hibernate-save-and-persist" />
