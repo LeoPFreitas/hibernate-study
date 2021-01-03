@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 
-            getEmployAndAddressByEMployeeId();
+            getEmployAndAddressByEmployeeId();
 
 //            session.beginTransaction();
 //            session.persist(getEmployee());
@@ -48,12 +48,13 @@ public class Main {
         return employee;
     }
 
-    private static void getEmployAndAddressByEMployeeId() {
+    private static void getEmployAndAddressByEmployeeId() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Employee employee = session.get(Employee.class, 1);
 
             if (employee != null) {
                 System.out.println(employee.toString());
+
                 employee.getAddressList()
                         .forEach(e -> System.out.println(e.toString()));
             }
